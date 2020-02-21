@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict House Prices</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="medInc" placeholder="Median Income" required="required" />
+        <input type="text" name="houseAge" placeholder="House Age" required="required" />
+		<input type="text" name="aveRooms" placeholder="Average Rooms" required="required" />
+    <input type="text" name="aveBedrms" placeholder="Average Bedrooms" required="required" />
+    <input type="text" name="population" placeholder="Population" required="required" />
+    <input type="text" name="aveOccup" placeholder="Average Occupants" required="required" />
+    <input type="text" name="latitude" placeholder="Latitude" required="required" />
+    <input type="text" name="longitude" placeholder="Longitude" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
