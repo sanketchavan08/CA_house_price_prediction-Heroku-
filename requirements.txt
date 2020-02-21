@@ -8,5 +8,5 @@ numpy>=1.9.2
 scipy>=0.15.1
 matplotlib>=1.4.3
 pandas>=0.19
-scikit-learn==0.20.2
-scikit-optimize==0.5.2
+scikit-learn==0.21.3
+
